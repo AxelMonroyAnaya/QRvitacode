@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Consulta Pedidos por Mes</title>
+    <link rel="stylesheet" href="../PQR_CSS/formular2.css">
+
+</head>
+<body>
+    <h2>informe de resumen con respecto la consulta 2</h2>
+    <br>
+    <form action="../PQR_PHP/consulta3.php" method="POST">
+        <label for="pesos">ingresa el curp:</label>
+        <input type="text" id="pesos" name="pesos" required>
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+<br>
+<h3>SELECT 
+    datospersonales.nombre, 
+    datospersonales.peso, 
+    datospersonales.nacionalidad, 
+    datospersonales.tipoSangre, 
+    COUNT(antecedentes.numPade) AS cantidadPadecimientos, 
+    COUNT(familiares.nombre) AS cantidadFamiliares
+FROM 
+    datospersonales 
+INNER JOIN 
+    antecedentes  ON datospersonales.curp = antecedentes.curp
+INNER JOIN 
+    familiares  ON familiares.curp_usuario = datospersonales.curp
+WHERE 
+    datospersonales.curp = 'CQPM900712HMNFRN09'
+GROUP BY 
+    datospersonales.nombre, 
+    datospersonales.peso, 
+    datospersonales.nacionalidad, 
+    datospersonales.tipoSangre; </h3>
+</html>

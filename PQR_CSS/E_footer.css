@@ -1,0 +1,26 @@
+footer {
+    background-color: lightblue;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Empuja el pie de página hacia abajo */
+}
+
+.info-footer,
+.redes-sociales {
+    flex: 1;
+}
+
+.info-footer h2,
+.redes-sociales h2 {
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+.redes-sociales a {
+    color: cyan;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}

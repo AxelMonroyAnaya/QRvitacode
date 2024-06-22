@@ -1,0 +1,23 @@
+.boton {
+    text-decoration: none;
+    background-color: lightskyblue;
+    border-radius: 3px;
+    position: relative; /* Cambiado de left: 0 a position: relative */
+    display: inline-block; /* Añadir para hacer el contenedor un bloque en línea */
+}
+
+.boton a {
+    color: white;
+    font-size: 20px;
+    box-shadow: 15px 5px 2px rgba(0, 0, 0, 1);
+    display: block; /* Añadir para que el enlace ocupe todo el contenedor */
+    text-decoration: none; /* Para asegurarse de que el enlace no tenga subrayado */
+}
+
+.boton:hover {
+    background-color: aliceblue;
+    border: 3px;
+    border-color: aqua;
+    transition: transform 3.5s, height 3.5s;
+    transform: scale(2.3);
+}

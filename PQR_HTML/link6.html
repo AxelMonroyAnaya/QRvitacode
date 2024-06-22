@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Consulta Pedidos por Mes</title>
+    <link rel="stylesheet" href="../PQR_CSS/formular2.css">
+
+</head>
+<body>
+    <h2>ver el estado cronico de usuarios especificos enfermos  con  cancer</h2>
+    <br>
+    <form action="../PQR_PHP/consulta6.php" method="POST">
+        <label for="pesos">ingresa el del usuario: </label>
+        <input type="text" id="pesos" name="pesos" required>
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+<br>
+
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Consulta Pedidos por Mes</title>
+    <link rel="stylesheet" href="../PQR_CSS/formular2.css">
+
+</head>
+<body>
+    <h2>ver parentesco  para  segmentar usuario con enfermedades y padecimientos cronicos</h2>
+    <br>
+    <form action="../PQR_PHP/consulta6.php" method="POST">
+        <label for="pesos">consulta el view </label>
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+<br>
+<h3>SELECT datospersonales.nombre, antecedentes.nombrePadecimiento, antecedentes.estadoCronico
+    FROM datospersonales
+    INNER JOIN antecedentes ON antecedentes.numeroAntecedente = datospersonales.numeroAntecedente
+    WHERE datospersonales.curp IN (
+        SELECT curp_usuario
+        FROM familiares
+        WHERE parentesco = 'amigo'
+    )
+    ORDER BY datospersonales.nombre ASC, antecedentes.nombrePadecimiento ASC;
+     </h3>
+</html>

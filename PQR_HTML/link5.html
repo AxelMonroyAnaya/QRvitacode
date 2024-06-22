@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Consulta Pedidos por Mes</title>
+    <link rel="stylesheet" href="../PQR_CSS/formular2.css">
+
+</head>
+<body>
+    <h2>ver parentesco  para  segmentar usuario con enfermedades y padecimientos cronicos</h2>
+    <br>
+    <form action="../PQR_PHP/consulta5.php" method="POST">
+        <label for="pesos">ingresa el parentesco con el usuario: </label>
+        <input type="text" id="pesos" name="pesos" required>
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+<br>
+<h3>SELECT 
+    datospersonales.nombre, 
+    padecimiento.nombrePadecimiento, 
+    antecedentes.coagulopatia AS estadoCronico 
+FROM 
+    datospersonales
+INNER JOIN 
+    antecedentes ON antecedentes.curp = datospersonales.curp
+INNER JOIN 
+    padecimiento ON padecimiento.numPade = antecedentes.numPade
+WHERE 
+    datospersonales.curp IN (
+        SELECT curp_usuario 
+        FROM familiares 
+        WHERE parentesco = 'amigo'
+    )
+ORDER BY 
+    datospersonales.nombre ASC, 
+    padecimiento.nombrePadecimiento ASC;
+
+     </h3>
+</html>

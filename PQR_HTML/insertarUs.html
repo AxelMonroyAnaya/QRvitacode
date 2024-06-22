@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inserción de Datos</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Inserción de Datos</h2>
+        <form action="../PQR_PHP/inserUs.php" method="POST">
+            <h3>Datos Personales</h3>
+            <div class="form-group">
+                <label for="curp">CURP:</label>
+                <input type="text" id="curp" name="curp" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido_p">Apellido Paterno:</label>
+                <input type="text" id="apellido_p" name="apellido_p" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido_m">Apellido Materno:</label>
+                <input type="text" id="apellido_m" name="apellido_m" required>
+            </div>
+            <div class="form-group">
+                <label for="NumeroSS">Número de Seguro Social:</label>
+                <input type="number" id="NumeroSS" name="NumeroSS" required>
+            </div>
+            <div class="form-group">
+                <label for="nacionalidad">Nacionalidad:</label>
+                <input type="text" id="nacionalidad" name="nacionalidad" required>
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso:</label>
+                <input type="number" id="peso" name="peso" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="tipoSangre">Tipo de Sangre:</label>
+                <input type="text" id="tipoSangre" name="tipoSangre" required>
+            </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+            </div>
+
+            <h3>Antecedentes</h3>
+            <div class="form-group">
+                <label for="nombrePadecimiento">Nombre del Padecimiento:</label>
+                <input type="text" id="nombrePadecimiento" name="nombrePadecimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="cuagulopatia">Coagulopatía:</label>
+                <input type="text" id="cuagulopatia" name="cuagulopatia" required>
+            </div>
+            <div class="form-group">
+                <label for="alergiasGenerales">Alergias Generales:</label>
+                <input type="text" id="alergiasGenerales" name="alergiasGenerales" required>
+            </div>
+            <div class="form-group">
+                <label for="anafilaxia">Anafilaxia:</label>
+                <input type="text" id="anafilaxia" name="anafilaxia" required>
+            </div>
+            <div class="form-group">
+                <label for="estadoCronico">Estado Crónico:</label>
+                <input type="text" id="estadoCronico" name="estadoCronico" required>
+            </div>
+
+            <h3>Datos del Familiar</h3>
+            <div class="form-group">
+                <label for="curp_familiar">CURP del Familiar:</label>
+                <input type="text" id="curp_familiar" name="curp_familiar" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre_familiar">Nombre del Familiar:</label>
+                <input type="text" id="nombre_familiar" name="nombre_familiar" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido_p_familiar">Apellido Paterno del Familiar:</label>
+                <input type="text" id="apellido_p_familiar" name="apellido_p_familiar" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido_m_familiar">Apellido Materno del Familiar:</label>
+                <input type="text" id="apellido_m_familiar" name="apellido_m_familiar" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono del Familiar:</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="parentesco">Parentesco:</label>
+                <input type="text" id="parentesco" name="parentesco" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

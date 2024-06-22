@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Consulta Pedidos por Mes</title>
+    <link rel="stylesheet" href="../PQR_CSS/formular2.css">
+
+</head>
+<body>
+    <h2>buscar registros de personas mediante la  nacionalidad</h2>
+    <br>
+    <form action="../PQR_PHP/consulta1.php" method="POST">
+        <label for="pesos">ingresa la nacionalidad:</label>
+        <input type="text" id="pesos" name="pesos" required>
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+<br>
+<h3>sintaxis  usada : 	
+    select nombre, apellido_p, apellido_m, peso
+	from datospersonales
+	where nacionalidad = nacionalidad
+	order by nombre asc; </h3>
+</html>
