@@ -1,0 +1,34 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+    border-color: cyan;
+    box-shadow: 0 0 10px cyan;
+}
+
+h4 {
+    margin: 10px 0 0 0;
+    font-size: 1em;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #012245;
+    font-weight: bold;
+    background-color: #acb5ef;
+    border-radius: 4px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

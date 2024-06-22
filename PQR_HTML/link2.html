@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Consulta Pedidos por Mes</title>
+    <link rel="stylesheet" href="../PQR_CSS/formular2.css">
+
+</head>
+<body>
+    <h2>informe general de un usuarios</h2>
+    <br>
+    <form action="../PQR_PHP/consulta2.php" method="POST">
+        <label for="qr">ingresa la curp del usuario:</label>
+        <input type="qr" id="qr" name="qr" required>
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+<br>
+<h3>	select datospersonales.nombre, datospersonales.NumeroSS, datospersonales.tipoSangre,antecedentes.alergiasGenerales, antecedentes.nombrePadecimiento,
+	antecedentes.estadoCronico, familiares.nombre as nombrefamiliar, familiares.telefono, familiares.parentesco
+	from datospersonales
+
+    inner join antecedentes on antecedentes.numeroAntecedente=datospersonales.numeroAntecedente
+	inner join familiares on familiares.curp_usuario=datospersonales.curp
+    
+	where datospersonales.curp= curpUs;
+     </h3>
+</html>

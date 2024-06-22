@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Consulta Pedidos por Mes</title>
+    <link rel="stylesheet" href="../PQR_CSS/formular.css">
+
+</head>
+<body>
+    <h3>informe por busqueda de curp</h3>
+    <form action="../PQR_PHP/consultaQr.php" method="POST">
+        <label for="qr">ingresa el curp del usuario:</label>
+        <input type="text" id="qr" name="qr" required>
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+</html>

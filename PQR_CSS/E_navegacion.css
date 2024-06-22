@@ -1,0 +1,69 @@
+.barra {
+    display: flex;
+    justify-content: center;
+    background-color: #fff; /* Fondo blanco */
+    border: 2px solid #00ffff; /* Borde cian */
+    border-radius: 10px;
+    padding: 10px 20px;
+    list-style: none;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra > li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.barra a {
+    color: #0e058e; /* Texto cian */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    padding: 10px 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sub{
+
+    margin-right: 30px;
+
+}
+
+.barra a:hover {
+    background-color: #00ffff; /* Fondo cian */
+    color: #fff; /* Texto blanco */
+    transform: translateY(-3px); /* Levanta el elemento al pasar el ratón */
+}
+
+.barra ul {
+    display: none; /* Ocultar submenús por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* Fondo blanco */
+    border: 2px solid #00ffff; /* Borde cian */
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0; /* Más espacio alrededor del submenú */
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra li:hover > ul {
+    display: block; /* Mostrar submenú al pasar el ratón */
+}
+
+.barra ul li {
+    margin: 0;
+}
+
+.barra ul a {
+    padding: 10px 30px; /* Más espacio a los lados de los elementos del submenú */
+    white-space: nowrap;
+}
+
+.barra ul a:hover {
+    background-color: #00ffff; /* Fondo cian */
+    color: #fff; /* Texto blanco */
+}

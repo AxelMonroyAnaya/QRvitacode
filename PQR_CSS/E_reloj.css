@@ -1,0 +1,32 @@
+
+.relojcl {
+    text-align: center;
+    padding: 12px; /* Aumentar el relleno */
+    border: 2px solid #333;
+    border-radius: 10px;
+    width: 180px; /* Aumentar el ancho */
+    margin: 25px auto; /* Aumentar el margen */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgb(11, 4, 148); 
+}
+
+.relojcl:hover{
+    box-shadow: 0 0 10px rgb(82, 243, 255);
+
+}
+
+#reloj {
+    font-size: 1.8em; 
+    margin-top: 6px;
+    font-family: 'VT323', monospace;
+}
+
+/* Estilo para el título */
+.relojcl h3 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em; 
+    color: rgb(82, 243, 255); 
+}
